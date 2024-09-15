@@ -1,0 +1,59 @@
+/* Write CSS code here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(75, 204, 255), rgb(255, 35, 255));
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 400px;
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+.circular-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.circular-progress::before{
+    /*Write below*/
+    content: "";
+    position: absolute;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+}
