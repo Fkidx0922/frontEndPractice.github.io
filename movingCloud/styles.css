@@ -1,0 +1,40 @@
+/* Write CSS code here */
+body {
+    margin: 0px;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(117, 159, 236);
+    overflow: hidden;
+}
+
+.cloud {
+    width: 200px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+    position: absolute;
+}
+
+.cloudBubble1 {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+}
+
+.cloudBubble2 {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: -30px;
+    right: 30px;
+}
