@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00f260, #0575e6);
+    padding: 10px;
+}
+
+.container .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.container .todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container .todo-app h2 i {
+    margin-left: 10px;
+}
+
+.container .todo-app .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.container .todo-app .row input {
+    flex: 1; /* 這裡的意思是讓input佔據row的所有可用空間 */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.container .todo-app .row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(199, 29, 29);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background .1s ease-in-out;
+}
+
+.container .todo-app .row button:hover {
+    background: rgb(199, 29, 29, 0.8);
+}
+
+.container .todo-app ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none; /* 禁止用鼠標在上面選文字、圖片等 */
+    cursor: pointer;
+    position: relative;
+}
+
+.container .todo-app ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #b3b4b4;
+    top: 6px;
+    left: 8px;
+}
+
+.container .todo-app ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.container .todo-app ul li.checked::before {
+    background: url("circle-check-solid.svg");
+}
+
+.container .todo-app ul li span {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: background .1s ease-in-out;
+}
+
+.container .todo-app ul li span:hover {
+    background: #edeef0;
+} 
