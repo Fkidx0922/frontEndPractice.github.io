@@ -27,7 +27,7 @@ body {
 
 .container .leftSide {
     position: relative;
-    background: rgb(114, 153, 199);
+    background: rgb(56, 66, 207);
     padding: 40px;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .container .leftSide .contact {
-    padding-top: 20px;
+    margin: 40px 0;
 }
 
 .container .leftSide .contact .title {
@@ -115,7 +115,7 @@ body {
 .container .leftSide .contact ul li .text {
     display: inline-block;
     color: white;
-    font-weight: 300;
+    font-weight: 500;
     /* 確保文本內容不會自動換行 */
     white-space: nowrap;
 }
@@ -251,7 +251,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
+    margin-left: -10px;
 }
 
 .container .rightSide .about .opportunity {
@@ -265,6 +265,14 @@ body {
     display: flex;
     align-items: center;
 }
+
+/* .container .rightSide .about .qr-code {
+	min-width: 200px;
+}
+
+.container .rightSide .about .qr-code img {
+    margin-top: 10px;
+} */
 
 @media (max-width: 1000px) {
 	.container {
@@ -286,3 +294,148 @@ body {
 		margin-bottom: 10px;
 	}
 }
+
+/* 更新打印媒体查询 */
+@media print {
+    body {
+        background: none !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 210mm;
+        height: 297mm;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 5mm;
+        box-shadow: none;
+        display: flex;
+        overflow: hidden;
+        page-break-after: avoid;
+    }
+
+    .container .leftSide,
+    .container .rightSide {
+        padding: 3mm;
+    }
+
+    .container .leftSide {
+        width: 35%;
+    }
+
+    .container .rightSide {
+        width: 65%;
+    }
+
+    /* 调整左侧字体大小和样式 */
+    .container .leftSide .profile h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .container .leftSide .contact {
+        margin: 20px 16px;
+    }
+
+    .container .leftSide .contact .title {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .container .leftSide .contact ul li {
+        margin-bottom: 4px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .container .leftSide .contact ul li .icon {
+        flex-shrink: 0;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .container .leftSide .contact ul li .text {
+        font-size: 14px;
+        line-height: 1.3;
+        word-break: break-word;
+        white-space: normal;
+        flex: 1;
+        margin-left: 16px;
+        font-weight: 600;
+    }
+
+    
+    /* .container .leftSide .contact ul li:last-child .text {
+        white-space: pre-line; 
+    } */
+
+    /* 调整右侧字体大小 */
+    .container .rightSide .about {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+    }
+
+    .container .rightSide .about .box {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .container .rightSide .about .title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .container .rightSide .about p,
+    .container .rightSide .about.education .box .text p,
+    .container .rightSide .about.experience .box .text p {
+        font-size: 14px;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .container .rightSide .about.education .box .year h5,
+    .container .rightSide .about.experience .box .grade h5 {
+        font-size: 14px;
+    }
+
+    .container .rightSide .about.education .box .text h5,
+    .container .rightSide .about.experience .box .text h5 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .container .rightSide .about.last .text,  .container .rightSide .about.last ul li{
+        font-size: 14px;
+    }
+
+    /* 调整语言能力条的大小 */
+    .container .leftSide .contact.languages .percent {
+        height: 2px;
+    }
+
+    /* 确保内容不会跨页 */
+    .container .rightSide .about {
+        page-break-inside: avoid;
+        margin-bottom: 18px;
+    }
+
+    /* .container .rightSide .about .qr-code, 
+    .container .rightSide .about .portfolio,
+    .container .rightSide .about .opportunity {
+        min-width: 21%;
+    } */
+    .container .rightSide .about .portfolio,
+    .container .rightSide .about .opportunity {
+        min-width: 32%;
+    } 
+
+    /* 确保页面大小设置正确 */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+
